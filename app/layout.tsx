@@ -6,8 +6,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "HealthCare Clinic - Your Health Is Our Priority",
-  description: "Providing compassionate, comprehensive healthcare services for you and your family.",
+  title: "Clínica San Roque",
+  description: "Empresa privada especializada en el tratamiento de heridas y servicios de enfermería.",
 }
 
 export default function RootLayout({
