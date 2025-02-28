@@ -1,0 +1,55 @@
+{
+  "common": {
+    "bookAppointment": "Book Appointment",
+    "contact": "Contact",
+    "services": "Services",
+    "aboutUs": "About Us",
+    "ourDoctors": "Our Doctors",
+    "testimonials": "Testimonials"
+  },
+  "hero": {
+    "title": "Your Health Is Our Priority",
+    "subtitle": "Providing compassionate, comprehensive healthcare services for you and your family.",
+    "ctaBook": "Book an Appointment",
+    "ctaServices": "Our Services"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Healthcare Services",
+    "description": "We offer a wide range of medical services to meet your healthcare needs."
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Trusted Healthcare Since 1995",
+    "description": "HealthCare Clinic has been providing exceptional medical care to our community for over 25 years. Our mission is to deliver personalized, high-quality care with compassion and respect.",
+    "ctaDoctors": "Meet Our Doctors",
+    "ctaContact": "Contact Us"
+  },
+  "doctors": {
+    "title": "Our Team",
+    "subtitle": "Meet Our Experienced Doctors",
+    "description": "Our team of dedicated healthcare professionals is committed to providing you with the highest quality care."
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What Our Patients Say",
+    "description": "Read about the experiences of our patients and their journey to better health."
+  },
+  "appointment": {
+    "title": "Book an Appointment",
+    "subtitle": "Schedule Your Visit",
+    "description": "We're here to help you take the first step towards better health. Schedule an appointment with one of our healthcare professionals today."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "description": "Have questions or need more information? We're here to help."
+  },
+  "footer": {
+    "allRightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "accessibility": "Accessibility"
+  }
+}
+

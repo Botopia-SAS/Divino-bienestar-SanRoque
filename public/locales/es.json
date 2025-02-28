@@ -1,0 +1,55 @@
+{
+  "common": {
+    "bookAppointment": "Agendar Cita",
+    "contact": "Contacto",
+    "services": "Servicios",
+    "aboutUs": "Sobre Nosotros",
+    "ourDoctors": "Nuestros Médicos",
+    "testimonials": "Testimonios"
+  },
+  "hero": {
+    "title": "Su Salud es Nuestra Prioridad",
+    "subtitle": "Brindamos servicios de atención médica integrales y compasivos para usted y su familia.",
+    "ctaBook": "Agendar una Cita",
+    "ctaServices": "Nuestros Servicios"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Servicios de Atención Médica Integral",
+    "description": "Ofrecemos una amplia gama de servicios médicos para satisfacer sus necesidades de atención médica."
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Atención Médica de Confianza Desde 1995",
+    "description": "HealthCare Clinic ha brindado atención médica excepcional a nuestra comunidad durante más de 25 años. Nuestra misión es brindar atención personalizada y de alta calidad con compasión y respeto.",
+    "ctaDoctors": "Conozca a Nuestros Médicos",
+    "ctaContact": "Contáctenos"
+  },
+  "doctors": {
+    "title": "Nuestro Equipo",
+    "subtitle": "Conozca a Nuestros Médicos Experimentados",
+    "description": "Nuestro equipo de profesionales de la salud dedicados está comprometido a brindarle la atención de la más alta calidad."
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Lo que Dicen Nuestros Pacientes",
+    "description": "Lea sobre las experiencias de nuestros pacientes y su camino hacia una mejor salud."
+  },
+  "appointment": {
+    "title": "Agendar una Cita",
+    "subtitle": "Programe su Visita",
+    "description": "Estamos aquí para ayudarlo a dar el primer paso hacia una mejor salud. Programe una cita con uno de nuestros profesionales de la salud hoy."
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Póngase en Contacto",
+    "description": "¿Tiene preguntas o necesita más información? Estamos aquí para ayudar."
+  },
+  "footer": {
+    "allRightsReserved": "Todos los derechos reservados.",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio",
+    "accessibility": "Accesibilidad"
+  }
+}
+
