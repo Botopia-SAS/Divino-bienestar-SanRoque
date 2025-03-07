@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { MapPin, Phone, Mail } from "lucide-react"
-import { Logo } from "@/components/branding/logo"
+import Link from "next/link";
+import { MapPin, Phone, Mail } from "lucide-react";
+import { Logo } from "@/components/branding/logo";
 
 const quickLinks = [
   { href: "#services", label: "Services" },
@@ -8,7 +8,7 @@ const quickLinks = [
   { href: "#doctors", label: "Our Doctors" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
-]
+];
 
 const serviceLinks = [
   { href: "#", label: "Primary Care" },
@@ -17,24 +17,29 @@ const serviceLinks = [
   { href: "#", label: "Pediatric Care" },
   { href: "#", label: "Laboratory Services" },
   { href: "#", label: "Telemedicine" },
-]
+];
 
 export function Footer() {
   return (
     <footer className="w-full border-t bg-background py-6 md:py-12">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-8 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <Logo />
             <p className="text-sm text-muted-foreground">
-              Providing compassionate, comprehensive healthcare services for you and your family since 1995.
+              Providing compassionate, comprehensive healthcare services for you
+              and your family since 1995.
             </p>
           </div>
           <div className="space-y-4">
             <h3 className="text-lg font-medium">Quick Links</h3>
             <nav className="flex flex-col space-y-2">
               {quickLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="text-sm hover:underline">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm hover:underline"
+                >
                   {link.label}
                 </Link>
               ))}
@@ -44,7 +49,11 @@ export function Footer() {
             <h3 className="text-lg font-medium">Services</h3>
             <nav className="flex flex-col space-y-2">
               {serviceLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="text-sm hover:underline">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm hover:underline"
+                >
                   {link.label}
                 </Link>
               ))}
@@ -70,7 +79,8 @@ export function Footer() {
         </div>
         <div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} HealthCare Clinic. All rights reserved.
+            &copy; {new Date().getFullYear()} HealthCare Clinic. All rights
+            reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="#" className="text-xs hover:underline">
@@ -86,6 +96,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
