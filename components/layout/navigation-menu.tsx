@@ -11,8 +11,9 @@ import {
 import { Menu } from "lucide-react"
 
 const navigationLinks = [
+  { href: '#home', label: 'Inicio' },
   { href: "#corporate_values", label: "Valores corporativos" },
-  { href: "#about", label: "Acerca de" },
+  { href: "#about", label: "Nosotros" },
   { href: "#vision", label: "Visión" },
   { href: "#contact", label: "Contacto" },
 ]

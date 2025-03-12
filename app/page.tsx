@@ -1,11 +1,11 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
-import { HeroSection } from "@/components/sections/hero-section"
-import { ServicesSection } from "@/components/sections/services-section"
-import { AboutSection } from "@/components/sections/about-section"
-import { DoctorsSection } from "@/components/sections/doctors-section"
-import { ContactSection } from "@/components/sections/contact-section"
-import { ThemeProvider } from "@/components/theme-provider"
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
+import { AboutSection } from "@/components/sections/about-section";
+import { ContactSection } from "@/components/sections/contact-section";
+import { HeroSection } from "@/components/sections/hero-section";
+import { CorporateValuesSection } from "@/components/sections/corpate-values-section";
+import { ThemeProvider } from "@/components/theme-provider";
+import ServicesSection from "@/components/sections/services-section";
 
 export default function HealthClinicLanding() {
   return (
@@ -14,14 +14,12 @@ export default function HealthClinicLanding() {
         <Header />
         <main className="flex-1">
           <HeroSection />
-          <ServicesSection />
+          <CorporateValuesSection />
           <AboutSection />
-          <DoctorsSection />
+          <ServicesSection />
           <ContactSection />
         </main>
-        <Footer />
       </div>
     </ThemeProvider>
-  )
+  );
 }
-
