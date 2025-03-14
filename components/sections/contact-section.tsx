@@ -1,53 +1,10 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    phone: "",
-    message: "",
-  });
-  const [loading, setLoading] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setSuccessMessage("");
-    setErrorMessage("");
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-      if (response.ok) {
-        setSuccessMessage("¡Tu mensaje ha sido enviado exitosamente!");
-        setFormData({ name: "", email: "", subject: "", phone: "", message: "" });
-      } else {
-        setErrorMessage(result.message || "Ocurrió un error al enviar el mensaje.");
-      }
-    } catch (error) {
-      setErrorMessage("No se pudo enviar el mensaje. Intenta de nuevo más tarde.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <section
       id="contact"
@@ -63,76 +20,95 @@ export function ContactSection() {
               Déjanos ayudarte
             </h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              ¿Tienes alguna duda o necesitas más información? Aquí estamos para ti.
+              ¿Tienes alguna duda o necesitas más información? Aquí estamos para
+              ti.
             </p>
           </div>
         </div>
         <div className="flex justify-center py-12">
           <div className="w-full max-w-3xl rounded-xl border border-teal-100 dark:border-teal-800 bg-white dark:bg-slate-900 text-card-foreground shadow-md hover:shadow-lg transition-shadow p-6">
-            <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Formulario con integración a FormSubmit */}
+            <form
+              action="https://formsubmit.co/juandiego.gama11@gmail.com"
+              method="POST"
+              className="space-y-4"
+            >
+              {/* Campos ocultos para mejorar el funcionamiento */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://tu-web.com/gracias"
+              />
+
               <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium text-slate-800 dark:text-slate-200">
+                <label
+                  htmlFor="name"
+                  className="text-sm font-medium text-slate-800 dark:text-slate-200"
+                >
                   Nombre
                 </label>
                 <Input
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   placeholder="Ingresa tu nombre"
                   required
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-slate-800 dark:text-slate-200">
+                <label
+                  htmlFor="email"
+                  className="text-sm font-medium text-slate-800 dark:text-slate-200"
+                >
                   Correo
                 </label>
                 <Input
                   id="email"
                   name="email"
                   type="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   placeholder="john.doe@email.com"
                   required
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium text-slate-800 dark:text-slate-200">
+                <label
+                  htmlFor="subject"
+                  className="text-sm font-medium text-slate-800 dark:text-slate-200"
+                >
                   Asunto
                 </label>
                 <Input
                   id="subject"
                   name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
                   placeholder="¿Cuál es tu duda?"
                   required
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="phone" className="text-sm font-medium text-slate-800 dark:text-slate-200">
+                <label
+                  htmlFor="phone"
+                  className="text-sm font-medium text-slate-800 dark:text-slate-200"
+                >
                   Teléfono
                 </label>
                 <Input
                   id="phone"
                   name="phone"
                   type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
                   placeholder="(+57) 300 123 4567"
                   required
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-slate-800 dark:text-slate-200">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-medium text-slate-800 dark:text-slate-200"
+                >
                   Mensaje
                 </label>
                 <Textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   placeholder="Descríbenos tu petición"
                   required
                 />
@@ -140,12 +116,9 @@ export function ContactSection() {
               <Button
                 type="submit"
                 className="w-full bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white"
-                disabled={loading}
               >
-                {loading ? "Enviando..." : "Enviar mensaje"}
+                Enviar mensaje
               </Button>
-              {successMessage && <p className="text-green-600 text-center mt-2">{successMessage}</p>}
-              {errorMessage && <p className="text-red-600 text-center mt-2">{errorMessage}</p>}
             </form>
           </div>
         </div>
