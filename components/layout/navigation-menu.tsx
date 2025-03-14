@@ -14,7 +14,7 @@ const navigationLinks = [
   { href: '#home', label: 'Inicio' },
   { href: "#corporate_values", label: "Valores corporativos" },
   { href: "#about", label: "Nosotros" },
-  { href: "#vision", label: "Visión" },
+  { href: "#vision", label: "Servicios" },
   { href: "#contact", label: "Contacto" },
 ]
 
