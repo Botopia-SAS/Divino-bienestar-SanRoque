@@ -4,7 +4,7 @@ export default function ServicesSection() {
 
   return (
     <section
-      id="servicios"
+      id="services"
       className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900 dark:to-blue-900"
     >
       <div className="container px-4 md:px-6">
